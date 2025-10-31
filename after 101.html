@@ -1,0 +1,2047 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>After Rental Case Processing Master Guide 101 - Europcar UK</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        header {
+            background: linear-gradient(135deg, #019901 0%, #019901 100%);
+            color: white;
+            padding: 40px;
+            margin: -40px -40px 40px -40px;
+            border-radius: 8px 8px 0 0;
+        }
+        
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        header .subtitle {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .toc {
+            background: #f8f9fa;
+            padding: 30px;
+            margin: 30px 0;
+            border-left: 4px solid #019901;
+            border-radius: 4px;
+        }
+        
+        .toc h2 {
+            color: #019901;
+            margin-bottom: 20px;
+        }
+        
+        .toc ul {
+            list-style: none;
+        }
+        
+        .toc li {
+            padding: 8px 0;
+        }
+        
+        .toc a {
+            color: #019901;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .toc a:hover {
+            color: #019901;
+            text-decoration: underline;
+        }
+        
+        section {
+            margin: 50px 0;
+            page-break-inside: avoid;
+        }
+        
+        h2 {
+            color: #019901;
+            font-size: 2em;
+            margin: 40px 0 20px 0;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #019901;
+        }
+        
+        h3 {
+            color: #019901;
+            font-size: 1.5em;
+            margin: 30px 0 15px 0;
+        }
+        
+        h4 {
+            color: #555;
+            font-size: 1.2em;
+            margin: 20px 0 10px 0;
+        }
+        
+        p {
+            margin: 15px 0;
+            text-align: justify;
+        }
+        
+        ul, ol {
+            margin: 15px 0 15px 30px;
+        }
+        
+        li {
+            margin: 8px 0;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        th {
+            background: #019901;
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        tr:hover {
+            background: #e9ecef;
+        }
+        
+        .info-box {
+            background: #e7fff0;
+            border-left: 4px solid #019901;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .warning-box {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .success-box {
+            background: #d4edda;
+            border-left: 4px solid #28a745;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .error-box {
+            background: #f8d7da;
+            border-left: 4px solid #dc3545;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        code {
+            background: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background: #f4f4f4;
+            padding: 20px;
+            border-radius: 4px;
+            overflow-x: auto;
+            margin: 20px 0;
+            border-left: 4px solid #019901;
+        }
+        
+        .key-combo {
+            background: #333;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-family: monospace;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+        
+        .checklist {
+            list-style: none;
+            margin: 20px 0;
+        }
+        
+        .checklist li:before {
+            content: "☐ ";
+            font-size: 1.2em;
+            color: #019901;
+            margin-right: 8px;
+        }
+        
+        .print-button {
+            background: #1a5490;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 20px 0;
+            transition: background 0.3s;
+        }
+        
+        .print-button:hover {
+            background: #2874bc;
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            .container {
+                box-shadow: none;
+                padding: 20px;
+            }
+            
+            a {
+                color: #333;
+            }
+            
+            section {
+                page-break-inside: avoid;
+            }
+            
+            h2 {
+                page-break-after: avoid;
+            }
+        }
+        
+        footer {
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 2px solid #ddd;
+            text-align: center;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>After Rental Case Processing Master Guide 101</h1>
+            <div class="subtitle">Complete Reference Guide for Europcar UK Customer Service Advisors</div>
+            <div class="subtitle" style="margin-top: 10px; font-size: 0.9em;">Foundever - Customer Services Team</div>
+            <div class="subtitle" style="margin-top: 8px; font-size: 0.9em;">
+                Created by: Mohamed Adui<br>
+                Date: October 2025
+            </div>
+        </header>
+        
+        <!-- Print button removed -->
+
+        <div class="toc">
+            <h2>📑 Table of Contents</h2>
+            <ul>
+                <li><a href="#section1">1. Introduction & Overview</a></li>
+                <li><a href="#section2">2. Essential Systems & Access</a></li>
+                <li><a href="#section3">3. Case Qualification & Tagging</a></li>
+                <li><a href="#section4">4. Investigation Framework</a></li>
+                <li><a href="#section5">5. Decision Making Guidelines</a></li>
+                <li><a href="#section6">6. Communication Standards</a></li>
+                <li><a href="#section7">7. Case Closure Requirements</a></li>
+                <li><a href="#section8">8. Reason Code Directory</a></li>
+                <li><a href="#section9">9. Quick Reference Tables</a></li>
+                <li><a href="#section10">10. Specialized Scenarios & Edge Cases</a></li>
+                <li><a href="#section11">11. Best Practices and Pro Tips</a></li>
+                <li><a href="#section12">12. Continuous Improvement</a></li>
+                <li><a href="#section13">13. Final Checklist and Quick Start</a></li>
+                <li><a href="#section14">14. Appendices</a></li>
+            </ul>
+        </div>
+
+        <section id="section1">
+            <h2>1. Introduction & Overview</h2>
+            
+            <h3>Purpose</h3>
+            <p>This guide is your complete reference for handling After Rental cases at Europcar UK. Every process, decision tree, and template you need is contained within these pages.</p>
+            
+            <h3>What is an After Rental Case?</h3>
+            <p>After Rental cases are customer contacts received <strong>after the vehicle has been returned</strong> and the rental agreement has been closed. These typically involve:</p>
+            <ul>
+                <li>Invoice disputes</li>
+                <li>Charge queries</li>
+                <li>Refund requests</li>
+                <li>Document requests</li>
+                <li>Service complaints</li>
+                <li>Damage/fines queries</li>
+            </ul>
+            
+            <h3>Service Level Agreements (SLAs)</h3>
+            <ul>
+                <li><strong>Case resolution:</strong> 5 working days</li>
+                <li><strong>UK RFI response:</strong> 2 working days</li>
+                <li><strong>International RFI response:</strong> 3 working days</li>
+                <li><strong>Authorization requests:</strong> 2 working days</li>
+            </ul>
+            
+            <div class="success-box">
+                <h4>Key Principles</h4>
+                <ol>
+                    <li><strong>Every case deserves a substantive response</strong> - never just search offers or disclaimers</li>
+                    <li><strong>Evidence-based decisions</strong> - use systems, documentation, and data</li>
+                    <li><strong>Customer empathy</strong> - acknowledge their experience while presenting facts</li>
+                    <li><strong>Revenue protection</strong> - maintain charges when documentation supports them</li>
+                    <li><strong>Accuracy over speed</strong> - take time to investigate thoroughly</li>
+                </ol>
+            </div>
+        </section>
+
+        <section id="section2">
+            <h2>2. Essential Systems & Access</h2>
+            
+            <h3>Primary Systems</h3>
+            
+            <h4>Salesforce (CRM Tool)</h4>
+            <p><strong>Purpose:</strong> Case management, customer data, email communication</p>
+            <p><strong>Key Functions:</strong></p>
+            <ul>
+                <li>Create and manage cases</li>
+                <li>Access customer driver ID information</li>
+                <li>Send/receive emails with templates</li>
+                <li>View rental history</li>
+                <li>Access uploaded documents via "Retrieve All Docs"</li>
+            </ul>
+            
+            <div class="info-box">
+                <strong>Navigation Tips:</strong>
+                <ul>
+                    <li>Always use "Reply" button to maintain email threading</li>
+                    <li>Check "Retrieve All Docs" before requesting documents</li>
+                    <li>Add detailed case comments for internal tracking</li>
+                    <li>Use Ctrl+E on reservation screen for history</li>
+                </ul>
+            </div>
+            
+            <h4>Greenway</h4>
+            <p><strong>Purpose:</strong> Reservation and billing system</p>
+            <p><strong>Key Screens:</strong></p>
+            <ul>
+                <li><strong>Reservations (6,1):</strong> Booking details, rates, payment info</li>
+                <li><strong>Invoice Enquiry:</strong> Charges breakdown, payment status</li>
+                <li><strong>Helpdesk (Screen 17):</strong> Rental details, notes, amendments</li>
+                <li><strong>Vehicle Movement:</strong> Track vehicle by registration</li>
+                <li><strong>DEBCRED:</strong> Process refunds and amendments</li>
+            </ul>
+            
+            <h4>Greenway Function Keys</h4>
+            <table>
+                <tr>
+                    <th>Key</th>
+                    <th>Function</th>
+                    <th>Where to Use</th>
+                </tr>
+                <tr>
+                    <td><span class="key-combo">F3</span></td>
+                    <td>Find/Search</td>
+                    <td>Reservation, Invoice screens</td>
+                </tr>
+                <tr>
+                    <td><span class="key-combo">F4</span></td>
+                    <td>Commit/Save</td>
+                    <td>After entering data</td>
+                </tr>
+                <tr>
+                    <td><span class="key-combo">F5</span></td>
+                    <td>Dropdown options</td>
+                    <td>Selection fields</td>
+                </tr>
+                <tr>
+                    <td><span class="key-combo">F7</span></td>
+                    <td>Add notes (CRITICAL!)</td>
+                    <td>Invoice screen</td>
+                </tr>
+                <tr>
+                    <td><span class="key-combo">F8</span></td>
+                    <td>Exit screen</td>
+                    <td>Navigate out</td>
+                </tr>
+                <tr>
+                    <td><span class="key-combo">F10-F10</span></td>
+                    <td>Rate breakdown</td>
+                    <td>Reservation screen</td>
+                </tr>
+                <tr>
+                    <td><span class="key-combo">F12+N</span></td>
+                    <td>Driver profile</td>
+                    <td>Invoice/Reservation</td>
+                </tr>
+                <tr>
+                    <td><span class="key-combo">F12+W</span></td>
+                    <td>Payment details</td>
+                    <td>Invoice screen</td>
+                </tr>
+                <tr>
+                    <td><span class="key-combo">F12+E</span></td>
+                    <td>Detailed breakdown</td>
+                    <td>Charge lines</td>
+                </tr>
+                <tr>
+                    <td><span class="key-combo">F12+F</span></td>
+                    <td>Fast path (DEBCRED)</td>
+                    <td>Any screen</td>
+                </tr>
+                <tr>
+                    <td><span class="key-combo">Ctrl+E</span></td>
+                    <td>Reservation history</td>
+                    <td>Reservation screen</td>
+                </tr>
+                <tr>
+                    <td><span class="key-combo">Ctrl+K</span></td>
+                    <td>Function key list</td>
+                    <td>Any screen</td>
+                </tr>
+            </table>
+            
+            <h4>Connexus</h4>
+            <p><strong>Purpose:</strong> Vehicle telemetry and tracking</p>
+            <p><strong>Access:</strong> https://one-backoffice-pr.caas.aws.europcar.vwfs-ad/</p>
+            
+            <div class="info-box">
+                <strong>Key Data Available:</strong>
+                <ul>
+                    <li>Fuel levels (litres and percentage)</li>
+                    <li>Mileage/odometer readings</li>
+                    <li>Battery level (for EVs)</li>
+                    <li>GPS location (GDPR restrictions apply)</li>
+                    <li>Station geofence movements</li>
+                    <li>RPA/Cross border alerts</li>
+                </ul>
+            </div>
+            
+            <p><strong>How to Use:</strong></p>
+            <ol>
+                <li>Operations → Vehicles</li>
+                <li>Search by registration number</li>
+                <li>Select "Telemetry" tab</li>
+                <li>Choose data type: Fuel, Mileage, Battery Level, or Trips</li>
+                <li>Filter by rental agreement number or date range</li>
+                <li>Export as PDF for evidence</li>
+            </ol>
+            
+            <div class="warning-box">
+                <strong>GDPR Reminder:</strong> Only access location data with valid business reason and proper justification
+            </div>
+            
+            <h4>KGS (Document Management)</h4>
+            <p><strong>Purpose:</strong> Scanned rental documents</p>
+            <p><strong>Access:</strong> https://www.kgsltd.org/national/login.aspx</p>
+            <p><strong>Documents Available:</strong></p>
+            <ul>
+                <li>Rental Agreements (RA)</li>
+                <li>Statement of Return (SOR/Check-in docs)</li>
+                <li>Additional Optional Products form (AOP)</li>
+                <li>Delivery/Collection documents</li>
+            </ul>
+            <p><strong>Timeline:</strong> Documents should appear within <strong>5 working days</strong> of rental return</p>
+            
+            <h4>Delivery & Collection App</h4>
+            <p><strong>Purpose:</strong> Real-time vehicle condition photos</p>
+            <p><strong>Access:</strong> https://europcar.fieldmobility.com/Europcar/#!/Logon</p>
+            <p><strong>Available Information:</strong></p>
+            <ul>
+                <li>Exterior vehicle photos (all angles)</li>
+                <li>Interior vehicle photos</li>
+                <li>Instrument cluster photos (fuel gauge, mileage)</li>
+                <li>Completed paperwork PDFs</li>
+                <li>Geotag data and timestamp information</li>
+            </ul>
+            
+            <h4>SixPay</h4>
+            <p><strong>Purpose:</strong> Payment processing and authorization tracking</p>
+            <p><strong>Access:</strong> https://www.3cportal.com/portal/index.htm</p>
+            <p><strong>Login Credentials:</strong></p>
+            <ul>
+                <li>CustomerID: EuropcarEurope</li>
+                <li>Username: ECGB-CUSTSERV</li>
+                <li>Password: Summer25!</li>
+            </ul>
+            
+            <h4>SAFO (Fines System)</h4>
+            <p><strong>Purpose:</strong> Traffic violation documents</p>
+            <p><strong>Access:</strong> https://www.safosistemi.it/GEM/</p>
+            
+            <h4>Riskappli (Damage System)</h4>
+            <p><strong>Purpose:</strong> Damage claim documentation</p>
+            <p><strong>Access:</strong> https://riskappli-europcar.my.salesforce.com/</p>
+            <div class="warning-box">
+                <strong>Important:</strong> Claim status takes 24 hours to reflect after rental return
+            </div>
+        </section>
+
+        <section id="section3">
+            <h2>3. Case Qualification & Tagging</h2>
+            
+            <h3>Mandatory Fields (Must Complete All)</h3>
+            
+            <h4>1. Language</h4>
+            <ul>
+                <li><strong>English</strong> (default for UK cases)</li>
+                <li>Only change if case genuinely in another language</li>
+            </ul>
+            
+            <h4>2. Customer Journey</h4>
+            <p><strong>After Rental</strong> - for all cases where vehicle has been returned</p>
+            
+            <h4>3. Rental Country</h4>
+            <p>Select the country where the rental took place (most common: United Kingdom)</p>
+            
+            <h4>4. Brand</h4>
+            <ul>
+                <li><strong>Europcar</strong> (default)</li>
+                <li><strong>Selection</strong> (premium fleet)</li>
+            </ul>
+            
+            <h4>5. Reason Codes (Three Levels)</h4>
+            <p><strong>Format:</strong> Level 1 → Level 2 → Level 3</p>
+            
+            <div class="info-box">
+                <strong>Most Common After Rental Reason Codes:</strong>
+                <table>
+                    <tr>
+                        <th>Level 1</th>
+                        <th>Level 2</th>
+                        <th>Level 3</th>
+                    </tr>
+                    <tr>
+                        <td>After Rental</td>
+                        <td>Invoice Dispute - General</td>
+                        <td>Fuel Charges Dispute</td>
+                    </tr>
+                    <tr>
+                        <td>After Rental</td>
+                        <td>Invoice Dispute - Extra Services</td>
+                        <td>Non-Compliance with Rental Agreement</td>
+                    </tr>
+                    <tr>
+                        <td>After Rental</td>
+                        <td>Document Request</td>
+                        <td>Invoice Not Received/Not Found</td>
+                    </tr>
+                    <tr>
+                        <td>Charges and Identification</td>
+                        <td>Coverage</td>
+                        <td>Coverage Charge Dispute</td>
+                    </tr>
+                    <tr>
+                        <td>After Rental</td>
+                        <td>Deposit</td>
+                        <td>Deposit Not Released/Not Refunded</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <h4>6. Commentaire (Comment Flag)</h4>
+            <ul>
+                <li><strong>Yes:</strong> Customer expects a response / case requires action</li>
+                <li><strong>No:</strong> System-generated or info-only (rare for After Rental)</li>
+            </ul>
+            <p><strong>Default:</strong> Select <strong>"Yes"</strong> for all customer contacts</p>
+            
+            <h4>7. Sentiment</h4>
+            <ul>
+                <li><strong>Positive:</strong> Customer satisfied, complimentary, no complaint</li>
+                <li><strong>Negative:</strong> Customer dissatisfied, complaining, requesting resolution</li>
+            </ul>
+            
+            <h3>Special Case Considerations</h3>
+            
+            <h4>Corporate Bookings (Key Accounts)</h4>
+            <div class="warning-box">
+                <strong>If Key Account:</strong>
+                <ul>
+                    <li>DO NOT WORK THE CASE</li>
+                    <li>Reallocate to: <strong>UK - Key Account</strong> queue</li>
+                    <li>Add comment: "Key Account case - reallocated to KAST"</li>
+                </ul>
+            </div>
+            
+            <h4>Tour Operator Bookings</h4>
+            <p><strong>Identifiers:</strong></p>
+            <ul>
+                <li>Booking source ends in "C75" (e.g., LONC75)</li>
+                <li>Method of payment: VCH (Voucher), PPB (Prepaid Business)</li>
+                <li>Account name on reservation (e.g., RentalCars, Travel Jigsaw)</li>
+            </ul>
+            
+            <h4>International Hires (Non-UK)</h4>
+            <div class="info-box">
+                <strong>Process Differences:</strong>
+                <ul>
+                    <li>Consult International Guidelines</li>
+                    <li>Check document availability on FileNet/CRM tool</li>
+                    <li>RFI required if no documentation available</li>
+                    <li>Different refund rules may apply per country</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="section4">
+            <h2>4. Investigation Framework</h2>
+            
+            <h3>Step-by-Step Investigation Process</h3>
+            
+            <h4>Step 1: Understand the Customer's Issue</h4>
+            <p><strong>Read the email thoroughly and identify:</strong></p>
+            <ul>
+                <li>What is the customer disputing/requesting?</li>
+                <li>What specific charges are in question?</li>
+                <li>What dates/rental agreement are referenced?</li>
+                <li>Has the customer provided any evidence?</li>
+                <li>What outcome does the customer expect?</li>
+            </ul>
+            
+            <h4>Step 2: Complete GDPR Check</h4>
+            <div class="warning-box">
+                <strong>Before accessing any customer data, verify identity:</strong>
+                <p><strong>For emails:</strong></p>
+                <ul>
+                    <li>Verify email matches customer account</li>
+                    <li>If mismatch: Send Data Protection email</li>
+                    <li>Wait for response from verified email before proceeding</li>
+                </ul>
+                <p><strong>Never provide information to third parties without authorization</strong></p>
+            </div>
+            
+            <h4>Step 3: Gather Evidence from Systems</h4>
+            
+            <p><strong>Greenway Investigation:</strong></p>
+            <ol>
+                <li><strong>Reservation Screen (6,1):</strong> Confirm booking details, rates, inclusions</li>
+                <li><strong>Invoice Enquiry:</strong> Review all invoices, check F12+E on charges, <strong>F7 for notes (CRITICAL!)</strong></li>
+                <li><strong>Helpdesk Screen (Screen 17):</strong> Verify vehicle details, payment history, notes section</li>
+                <li><strong>Vehicle Movement Screen:</strong> Track vehicle by registration</li>
+            </ol>
+            
+            <p><strong>Documentation Check (Priority Order):</strong></p>
+            <ol>
+                <li><strong>Salesforce "Retrieve All Docs":</strong> Check first</li>
+                <li><strong>KGS:</strong> UK rentals (5 working day wait)</li>
+                <li><strong>D&C App:</strong> Delivery/collection photos and paperwork</li>
+                <li><strong>FileNet:</strong> International corporate countries</li>
+            </ol>
+            
+            <h4>Required Documents for Different Disputes:</h4>
+            <table>
+                <tr>
+                    <th>Dispute Type</th>
+                    <th>Required Documentation</th>
+                </tr>
+                <tr>
+                    <td>Charges</td>
+                    <td>Signed RA + AOP (if applicable)</td>
+                </tr>
+                <tr>
+                    <td>Fuel</td>
+                    <td>RA + SOR/Check-in docs + D&C photos + Connexus data</td>
+                </tr>
+                <tr>
+                    <td>Days Charged</td>
+                    <td>RA + SOR + Connexus geofence data</td>
+                </tr>
+                <tr>
+                    <td>Equipment</td>
+                    <td>RA + AOP + D&C photos</td>
+                </tr>
+                <tr>
+                    <td>Coverage</td>
+                    <td>RA + AOP (both must be 100% correct)</td>
+                </tr>
+                <tr>
+                    <td>Damage</td>
+                    <td>Riskappli documents (24hr wait)</td>
+                </tr>
+                <tr>
+                    <td>Fines</td>
+                    <td>SAFO documents</td>
+                </tr>
+            </table>
+            
+            <h4>Step 4: Check for Notes and Communications</h4>
+            <ul>
+                <li><strong>Greenway F7 Notes (Invoice screen):</strong> ALWAYS check before RFI</li>
+                <li><strong>Salesforce Case History:</strong> Previous contacts on same issue</li>
+                <li><strong>D&C App Notes:</strong> Delivery driver observations</li>
+            </ul>
+            
+            <h4>Step 5: Cross-Reference Terms & Conditions</h4>
+            <p><strong>Key T&C Sections:</strong></p>
+            <ul>
+                <li><strong>Section 5:</strong> Vehicle usage</li>
+                <li><strong>Section 16:</strong> Cancellations</li>
+                <li><strong>Section 20:</strong> Fuel policy</li>
+                <li><strong>Section 21:</strong> Data usage</li>
+                <li><strong>Section 23:</strong> Liability limitations</li>
+            </ul>
+            
+            <h4>Step 6: Identify Root Cause</h4>
+            <p><strong>Ask yourself:</strong></p>
+            <ul>
+                <li>Who is responsible? (Customer, station, system, standard process)</li>
+                <li>What evidence supports this?</li>
+                <li>Is documentation sufficient to maintain?</li>
+            </ul>
+            
+            <h4>Step 7: Determine If RFI Required</h4>
+            
+            <div class="success-box">
+                <strong>Send RFI When:</strong>
+                <ul>
+                    <li>Customer claims station told them something different</li>
+                    <li>Documentation missing (after 5 working days for UK)</li>
+                    <li>Need station's version of events</li>
+                    <li>Charge applied but no supporting evidence visible</li>
+                </ul>
+            </div>
+            
+            <div class="error-box">
+                <strong>DO NOT Send RFI For:</strong>
+                <ul>
+                    <li>Charges clearly visible on signed RA/AOP</li>
+                    <li>Connexus data answers the question</li>
+                    <li>Documentation available on systems</li>
+                    <li>Terms & Conditions question</li>
+                    <li>Deposit authorization queries</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="section5">
+            <h2>5. Decision Making Guidelines</h2>
+            
+            <h3>The Decision Framework</h3>
+            <p>Every After Rental case requires you to make ONE of these decisions:</p>
+            <ol>
+                <li><strong>Maintain the charge</strong> (Outcome: Charges Upheld)</li>
+                <li><strong>Refund the charge</strong> (Outcome: Refund)</li>
+                <li><strong>Partial refund</strong> (Outcome: Refund)</li>
+                <li><strong>Provide explanation only</strong> (Outcome: Explanation)</li>
+                <li><strong>Offer gesture of goodwill</strong> (Outcome: Apology/Upgrade Coupon)</li>
+            </ol>
+            
+            <h3>Maintain Charge When:</h3>
+            
+            <div class="success-box">
+                <h4>✅ Documentation Complete and Correct</h4>
+                <ul>
+                    <li>Signed RA + AOP present (if applicable)</li>
+                    <li>All fields completed accurately</li>
+                    <li>Amounts match charges applied</li>
+                    <li>Customer signature clear</li>
+                    <li>100% correct - no errors allowed</li>
+                </ul>
+            </div>
+            
+            <div class="success-box">
+                <h4>✅ System Data Supports Charge</h4>
+                <ul>
+                    <li>Connexus shows fuel missing/mileage accurate</li>
+                    <li>SixPay confirms transaction</li>
+                    <li>Greenway notes explain charge</li>
+                    <li>D&C photos support invoice</li>
+                </ul>
+            </div>
+            
+            <div class="success-box">
+                <h4>✅ Terms & Conditions Support Charge</h4>
+                <ul>
+                    <li>Charge explicitly covered in T&C</li>
+                    <li>Tariff Guide lists fee</li>
+                    <li>Mandatory charge per country rules</li>
+                    <li>Customer agreed to T&C at booking</li>
+                </ul>
+            </div>
+            
+            <h3>Refund Charge When:</h3>
+            
+            <div class="error-box">
+                <h4>❌ Documentation Missing or Incorrect</h4>
+                <ul>
+                    <li>No signed RA after 5 working days (UK)</li>
+                    <li>AOP not signed</li>
+                    <li>Amounts on AOP don't match invoice</li>
+                    <li>Fields left blank or incorrect</li>
+                    <li>Documents illegible</li>
+                </ul>
+            </div>
+            
+            <div class="error-box">
+                <h4>❌ System Data Contradicts Charge</h4>
+                <ul>
+                    <li>Connexus shows vehicle returned full</li>
+                    <li>D&C photos show equipment was missing at pickup</li>
+                    <li>Mileage telemetry shows charge impossible</li>
+                    <li>Payment already refunded per SixPay</li>
+                </ul>
+            </div>
+            
+            <div class="error-box">
+                <h4>❌ Evidence of Station Error</h4>
+                <ul>
+                    <li>F7 notes confirm mistake</li>
+                    <li>RFI confirms charge incorrect</li>
+                    <li>Duplicate charge visible</li>
+                    <li>Wrong rate applied vs signed RA</li>
+                </ul>
+            </div>
+            
+            <h3>Charge-Specific Decision Trees</h3>
+            
+            <h4>Fuel Charges</h4>
+            <table>
+                <tr>
+                    <th>Maintain If</th>
+                    <th>Refund If</th>
+                </tr>
+                <tr>
+                    <td>
+                        <ul>
+                            <li>Connexus shows fuel missing at return</li>
+                            <li>D&C collection photos show not full</li>
+                            <li>SOR/Check-in docs show level < full</li>
+                            <li>Customer admits not refueling</li>
+                            <li>Over 60 miles driven + gauge below full</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>Connexus shows returned full</li>
+                            <li>D&C photos show full tank</li>
+                            <li>Customer receipt shows refuel before return</li>
+                            <li>Under 60 miles + no documentation</li>
+                            <li>Delivery showed missing fuel</li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+            
+            <h4>Days Charged / Grace Period</h4>
+            <div class="info-box">
+                <strong>Grace Periods:</strong>
+                <ul>
+                    <li>Standard customers: 29 minutes</li>
+                    <li><strong>Star customers: 2 hours</strong> (UK only)</li>
+                </ul>
+            </div>
+            
+            <h4>Coverage Charges (CDW/THW/Protection Packages)</h4>
+            <table>
+                <tr>
+                    <th>Maintain If</th>
+                    <th>Refund If</th>
+                </tr>
+                <tr>
+                    <td>
+                        <ul>
+                            <li>RA AND AOP both signed and 100% correct</li>
+                            <li>Amounts on AOP match invoice</li>
+                            <li>Product on original booking</li>
+                            <li>Mandatory coverage per country T&C</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>AOP missing or not signed</li>
+                            <li>Amounts incorrect on AOP</li>
+                            <li>Not on booking AND not on paperwork</li>
+                            <li>US/Canadian customer with card coverage proof</li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+            
+            <h4>Deposit Not Released</h4>
+            <div class="warning-box">
+                <strong>Explain Only (No Refund Due):</strong>
+                <ul>
+                    <li>Authorization only (not debit) - released 3-10 working days by bank</li>
+                    <li>SixPay reversal receipt sent - customer to contact bank</li>
+                    <li>Partial release (some used for charges)</li>
+                    <li>Within 30-day authorization period</li>
+                </ul>
+            </div>
+            
+            <h3>Refund Amount Calculations</h3>
+            
+            <h4>Full Refund:</h4>
+            <ul>
+                <li>Entire charge in question</li>
+                <li>No documentation to support ANY of it</li>
+                <li>Station/system error affecting whole rental</li>
+            </ul>
+            
+            <h4>Partial Refund:</h4>
+            <ul>
+                <li>Part of charge justified, part not</li>
+                <li>Pro-rata calculation needed</li>
+                <li>Example: 3 days charged, 2 days justified = refund 1 day</li>
+            </ul>
+            
+            <div class="info-box">
+                <h4>VAT Considerations:</h4>
+                <ul>
+                    <li>Greenway refunds include VAT automatically</li>
+                    <li>Allowances: remove VAT first (divide by 1.20 for UK)</li>
+                    <li>Example: £60 refund = £50 allowance (60/1.2)</li>
+                </ul>
+            </div>
+            
+            <h3>When to Escalate/Seek Guidance</h3>
+            
+            <div class="warning-box">
+                <h4>Mandatory Escalation:</h4>
+                <ul>
+                    <li>Refund exceeds your authorization limit</li>
+                    <li>Customer threatens legal action</li>
+                    <li>Fraud suspected</li>
+                    <li>GDPR breach identified</li>
+                    <li>Managing Director mention</li>
+                    <li>Media involvement</li>
+                </ul>
+            </div>
+            
+            <h4>Authorization Thresholds (UK Ops Staff):</h4>
+            <table>
+                <tr>
+                    <th>Amount</th>
+                    <th>Required Authorization</th>
+                </tr>
+                <tr>
+                    <td>£50 or under</td>
+                    <td>Station Manager</td>
+                </tr>
+                <tr>
+                    <td>£51-£150</td>
+                    <td>Territory Manager</td>
+                </tr>
+                <tr>
+                    <td>£151-£2,999</td>
+                    <td>Regional Director</td>
+                </tr>
+                <tr>
+                    <td>£3,000+</td>
+                    <td>Operations Director</td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="section6">
+            <h2>6. Communication Standards</h2>
+            
+            <h3>Email Structure (Mandatory Format)</h3>
+            
+            <pre>
+[Greeting]
+Dear [Customer Name],
+
+[Acknowledgment]
+Thank you for your email regarding [specific issue].
+
+[Empathy Statement]
+I understand your concerns about [restate their issue], and I'm sorry for any inconvenience this has caused.
+
+[Investigation Summary]
+I have reviewed [systems/documents checked] to investigate your query.
+
+[Decision/Explanation]
+[Detailed explanation of findings and decision]
+
+[Next Steps/Resolution]
+[What happens next - refund timeline, how to prevent future issues, etc.]
+
+[Additional Information]
+[Station contact details if relevant]
+[Survey invitation if applicable]
+
+[Closing]
+If you have any further questions, please don't hesitate to contact us.
+
+Kind regards,
+
+[Your Name]
+Customer Services Advisor
+Europcar UK
+            </pre>
+            
+            <h3>Tone and Language Guidelines</h3>
+            
+            <table>
+                <tr>
+                    <th>DO ✅</th>
+                    <th>DON'T ❌</th>
+                </tr>
+                <tr>
+                    <td>
+                        <ul>
+                            <li>Use customer's name</li>
+                            <li>Be polite and professional</li>
+                            <li>Show empathy and understanding</li>
+                            <li>Explain clearly and concisely</li>
+                            <li>Use positive language</li>
+                            <li>Be specific about next steps</li>
+                            <li>Acknowledge their frustration</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>Use jargon or internal terminology</li>
+                            <li>Blame the customer directly</li>
+                            <li>Make promises you can't keep</li>
+                            <li>Copy-paste without personalization</li>
+                            <li>Use emojis or casual language</li>
+                            <li>Write overly long paragraphs</li>
+                            <li>Leave questions unanswered</li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+            
+            <h3>Key Phrases for Different Scenarios</h3>
+            
+            <h4>Maintaining a Charge</h4>
+            <div class="info-box">
+                <p>"I have thoroughly reviewed your rental documentation, including the signed Rental Agreement and Additional Optional Products form. These documents confirm that [charge] was agreed to at the time of vehicle collection, with the amount clearly stated as £X per day."</p>
+                
+                <p>"Our system records, including vehicle telemetry data, show that [evidence]. This supports the charge applied to your invoice."</p>
+                
+                <p>"While I understand this is not the outcome you were hoping for, I must uphold the charge as it is fully supported by signed documentation and our rental terms."</p>
+            </div>
+            
+            <h4>Issuing a Refund</h4>
+            <div class="success-box">
+                <p>"Having investigated your case, I can confirm that [reason for refund]. I sincerely apologize for this error."</p>
+                
+                <p>"I have processed a refund of £X to your payment card ending in XXXX. Please allow 3-10 working days for this to appear in your account, depending on your card issuer's processing times."</p>
+            </div>
+            
+            <h4>Requesting Evidence from Customer</h4>
+            <div class="warning-box">
+                <p>"To investigate this further, I would need [specific documentation]. Could you please provide [exactly what you need] by replying to this email?"</p>
+                
+                <p>"If you have a dated and time-stamped receipt showing [relevant information], please send this to me and I will review your case again."</p>
+            </div>
+            
+            <h3>Using Templates</h3>
+            
+            <p><strong>Salesforce Templates Location:</strong> Send Internal Email → Select Template → Search by reason code</p>
+            
+            <div class="info-box">
+                <h4>Template Personalization Checklist:</h4>
+                <ul class="checklist">
+                    <li>Customer name included</li>
+                    <li>Specific charge amounts mentioned</li>
+                    <li>Rental Agreement number referenced</li>
+                    <li>Dates of hire included</li>
+                    <li>Evidence sources cited</li>
+                    <li>Refund amount stated (if applicable)</li>
+                    <li>Timeline for resolution provided</li>
+                    <li>Attachments mentioned if included</li>
+                </ul>
+            </div>
+            
+            <h3>Handling Sensitive Topics</h3>
+            
+            <h4>Customer Anger/Frustration</h4>
+            <div class="warning-box">
+                <strong>Approach:</strong>
+                <ul>
+                    <li>Acknowledge emotion without agreeing with incorrect facts</li>
+                    <li>Remain calm and professional</li>
+                    <li>Focus on facts and evidence</li>
+                    <li>Offer clear explanation</li>
+                    <li>Don't take it personally</li>
+                </ul>
+                
+                <p><strong>Example:</strong> "I understand this situation has been frustrating for you, and I appreciate you taking the time to contact us. I have carefully investigated your case to provide you with a clear explanation."</p>
+            </div>
+            
+            <h4>Legal Threats</h4>
+            <div class="error-box">
+                <strong>If customer mentions:</strong>
+                <ul>
+                    <li>Lawyer/solicitor involvement</li>
+                    <li>Taking legal action</li>
+                    <li>Small claims court</li>
+                    <li>Ombudsman complaint</li>
+                </ul>
+                
+                <strong>Action:</strong>
+                <ul>
+                    <li>Remain professional and factual</li>
+                    <li>Complete investigation thoroughly</li>
+                    <li>Document all evidence clearly</li>
+                    <li>DO NOT say "contact our legal team"</li>
+                    <li>Escalate to Team Leader</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="section7">
+            <h2>7. Case Closure Requirements</h2>
+            
+            <h3>Mandatory Closure Fields</h3>
+            
+            <h4>1. Outcome</h4>
+            <p>Dropdown selection that reflects the case result:</p>
+            
+            <table>
+                <tr>
+                    <th>Outcome</th>
+                    <th>When to Use</th>
+                </tr>
+                <tr>
+                    <td><strong>Charges Upheld</strong></td>
+                    <td>Maintained charge with evidence</td>
+                </tr>
+                <tr>
+                    <td><strong>Charges Upheld - Connexus Justified</strong></td>
+                    <td>Connexus data proves charge correct</td>
+                </tr>
+                <tr>
+                    <td><strong>Refund</strong></td>
+                    <td>Processed refund on Greenway or form</td>
+                </tr>
+                <tr>
+                    <td><strong>Refund - Lack of Documented Evidence</strong></td>
+                    <td>No supporting documentation available</td>
+                </tr>
+                <tr>
+                    <td><strong>Explanation</strong></td>
+                    <td>Provided information, no refund due</td>
+                </tr>
+                <tr>
+                    <td><strong>Documents Sent</strong></td>
+                    <td>Fulfilled document request</td>
+                </tr>
+                <tr>
+                    <td><strong>Apology</strong></td>
+                    <td>Issue acknowledged, gesture provided</td>
+                </tr>
+                <tr>
+                    <td><strong>Compensation</strong></td>
+                    <td>Payment for expenses/losses</td>
+                </tr>
+            </table>
+            
+            <h4>2. Root Cause</h4>
+            <p>Identifies who/what was responsible:</p>
+            
+            <table>
+                <tr>
+                    <th>Root Cause</th>
+                    <th>When to Use</th>
+                </tr>
+                <tr>
+                    <td><strong>Customer</strong></td>
+                    <td>Customer error or standard T&C</td>
+                </tr>
+                <tr>
+                    <td><strong>Pickup Station</strong></td>
+                    <td>Error at vehicle collection</td>
+                </tr>
+                <tr>
+                    <td><strong>Return Station</strong></td>
+                    <td>Error at vehicle return</td>
+                </tr>
+                <tr>
+                    <td><strong>System Error</strong></td>
+                    <td>Greenway/IT malfunction</td>
+                </tr>
+                <tr>
+                    <td><strong>Reservations</strong></td>
+                    <td>Booking team error</td>
+                </tr>
+                <tr>
+                    <td><strong>Standard Process/Rule</strong></td>
+                    <td>Refund per normal procedure</td>
+                </tr>
+            </table>
+            
+            <h4>3. Case Comments</h4>
+            <p>Detailed internal notes explaining:</p>
+            <ul>
+                <li><strong>What was investigated</strong> (systems checked)</li>
+                <li><strong>What was found</strong> (evidence discovered)</li>
+                <li><strong>Decision made</strong> (maintain/refund/explain)</li>
+                <li><strong>Action taken</strong> (refund processed, email sent, escalated)</li>
+                <li><strong>Reason for decision</strong> (documentation support, lack of evidence, T&C, etc.)</li>
+            </ul>
+            
+            <div class="success-box">
+                <h4>Good Case Comment Example:</h4>
+                <pre>Customer disputes fuel charge of £45.60 for 19 litres.
+
+Investigation:
+- Checked Connexus: Vehicle returned with 3/8 tank (62% full)
+- Reviewed D&C collection photos: Fuel gauge visible showing not full
+- SOR confirms check-in fuel level
+- RA states full-to-full policy agreed
+
+Decision: MAINTAIN CHARGE
+Charge justified by Connexus data and D&C photos. Customer charged for actual litres missing (19L) at £2.40/L as per signed RA.
+
+Outcome: Charges Upheld - Connexus Justified
+Root Cause: Customer
+Email sent with Connexus PDF attached, explained full-to-full policy.</pre>
+            </div>
+            
+            <div class="error-box">
+                <h4>Bad Case Comment Example (Don't do this):</h4>
+                <pre>Fuel charge maintained. Sent email.</pre>
+            </div>
+            
+            <h4>4. Refund Amount (If Applicable)</h4>
+            <ul>
+                <li>Enter exact amount refunded (including VAT)</li>
+                <li>Must match refund processed</li>
+                <li>Currency: GBP for UK cases</li>
+            </ul>
+            
+            <h3>Closure Process Step-by-Step</h3>
+            
+            <ol>
+                <li><strong>Verify Resolution Complete</strong> - All actions finished</li>
+                <li><strong>Complete Response Email</strong> - Personalized and professional</li>
+                <li><strong>Fill Outcome and Root Cause</strong> - Select appropriate options</li>
+                <li><strong>Enter Refund Amount</strong> (if applicable)</li>
+                <li><strong>Write Detailed Case Comments</strong> - Complete investigation notes</li>
+                <li><strong>Save and Send</strong> - Email sent successfully</li>
+                <li><strong>Close Case</strong> - Status changes to "Closed"</li>
+            </ol>
+            
+            <h3>Quality Checks Before Closure</h3>
+            
+            <div class="info-box">
+                <h4>Pre-Closure Checklist:</h4>
+                <ul class="checklist">
+                    <li>Customer name correct in email</li>
+                    <li>Case number referenced</li>
+                    <li>RA number mentioned</li>
+                    <li>All charges addressed</li>
+                    <li>Evidence attached (if maintaining)</li>
+                    <li>Refund amount stated (if applicable)</li>
+                    <li>Timeline provided (refund/resolution)</li>
+                    <li>Professional tone maintained</li>
+                    <li>No spelling/grammar errors</li>
+                    <li>Outcome matches decision</li>
+                    <li>Root cause appropriate</li>
+                    <li>Case comments detailed</li>
+                    <li>No outstanding actions</li>
+                    <li>Reply button used (not new email)</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="section8">
+            <h2>8. Reason Code Directory</h2>
+            
+            <h3>Most Common After Rental Reason Codes</h3>
+            
+            <table>
+                <tr>
+                    <th>Level 1</th>
+                    <th>Level 2</th>
+                    <th>Level 3</th>
+                    <th>Use Case</th>
+                </tr>
+                <tr>
+                    <td>After Rental</td>
+                    <td>Invoice Dispute - General</td>
+                    <td>Fuel Charge Dispute</td>
+                    <td>Customer disputes fuel charges</td>
+                </tr>
+                <tr>
+                    <td>After Rental</td>
+                    <td>Invoice Dispute - General</td>
+                    <td>Excessive Mileage Charge</td>
+                    <td>Disputing mileage charges</td>
+                </tr>
+                <tr>
+                    <td>After Rental</td>
+                    <td>Invoice Dispute - Extra Services</td>
+                    <td>Non-Compliance with Rental Agreement</td>
+                    <td>Late return, missing items, additional days</td>
+                </tr>
+                <tr>
+                    <td>After Rental</td>
+                    <td>Invoice Dispute - Extra Services</td>
+                    <td>Additional Charges Not Agreed at Pickup</td>
+                    <td>Charged for items not discussed</td>
+                </tr>
+                <tr>
+                    <td>After Rental</td>
+                    <td>Invoice Dispute - Extra Services</td>
+                    <td>One Way</td>
+                    <td>Disputing one-way charge</td>
+                </tr>
+                <tr>
+                    <td>After Rental</td>
+                    <td>Document Request</td>
+                    <td>Invoice Not Received/Not Found</td>
+                    <td>Customer never got invoice</td>
+                </tr>
+                <tr>
+                    <td>After Rental</td>
+                    <td>Document Request</td>
+                    <td>Rental Agreement Document Request</td>
+                    <td>Wants RA copy</td>
+                </tr>
+                <tr>
+                    <td>After Rental</td>
+                    <td>Deposit</td>
+                    <td>Deposit Not Released/Not Refunded</td>
+                    <td>Authorization not returned</td>
+                </tr>
+                <tr>
+                    <td>Charges and Identification</td>
+                    <td>Coverage</td>
+                    <td>Coverage Charge Dispute</td>
+                    <td>Disputing insurance/protection charges</td>
+                </tr>
+                <tr>
+                    <td>Charges and Identification</td>
+                    <td>Coverage</td>
+                    <td>Additional Driver</td>
+                    <td>Disputing additional driver charge</td>
+                </tr>
+                <tr>
+                    <td>Charges and Identification</td>
+                    <td>Missing Items</td>
+                    <td>Keys</td>
+                    <td>Charged for missing keys</td>
+                </tr>
+            </table>
+            
+            <div class="warning-box">
+                <h4>Common Mistakes:</h4>
+                <p>❌ Using "Fines" under Charges and Identification<br>
+                ✅ Use "Invoice Dispute - Fines" under After Rental</p>
+                
+                <p>❌ Using generic codes when specific exists<br>
+                ✅ Use most specific Level 3 code available</p>
+            </div>
+        </section>
+
+        <section id="section9">
+            <h2>9. Quick Reference Tables</h2>
+            
+            <h3>System Access Quick Reference</h3>
+            
+            <table>
+                <tr>
+                    <th>System</th>
+                    <th>URL/Access</th>
+                    <th>Primary Use</th>
+                </tr>
+                <tr>
+                    <td><strong>Salesforce</strong></td>
+                    <td>Service Console</td>
+                    <td>Case management, "Retrieve All Docs"</td>
+                </tr>
+                <tr>
+                    <td><strong>Greenway</strong></td>
+                    <td>Internal network</td>
+                    <td>Billing/reservations, F7 notes</td>
+                </tr>
+                <tr>
+                    <td><strong>Connexus</strong></td>
+                    <td>https://one-backoffice-pr.caas.aws.europcar.vwfs-ad/</td>
+                    <td>Vehicle telemetry, fuel/mileage data</td>
+                </tr>
+                <tr>
+                    <td><strong>KGS</strong></td>
+                    <td>https://www.kgsltd.org/national/login.aspx</td>
+                    <td>Scanned documents (5-day wait)</td>
+                </tr>
+                <tr>
+                    <td><strong>D&C App</strong></td>
+                    <td>https://europcar.fieldmobility.com/Europcar/#!/Logon</td>
+                    <td>Vehicle photos, paperwork PDFs</td>
+                </tr>
+                <tr>
+                    <td><strong>SixPay</strong></td>
+                    <td>https://www.3cportal.com/portal/index.htm</td>
+                    <td>Payment processing, authorizations</td>
+                </tr>
+                <tr>
+                    <td><strong>SAFO</strong></td>
+                    <td>https://www.safosistemi.it/GEM/</td>
+                    <td>Fines documents</td>
+                </tr>
+                <tr>
+                    <td><strong>Riskappli</strong></td>
+                    <td>https://riskappli-europcar.my.salesforce.com/</td>
+                    <td>Damage claims (24hr wait)</td>
+                </tr>
+            </table>
+            
+            <h3>SLA Quick Reference</h3>
+            
+            <table>
+                <tr>
+                    <th>Action Required</th>
+                    <th>Timeframe</th>
+                </tr>
+                <tr>
+                    <td>Case resolution</td>
+                    <td>5 working days</td>
+                </tr>
+                <tr>
+                    <td>UK RFI response</td>
+                    <td>2 working days</td>
+                </tr>
+                <tr>
+                    <td>International RFI response</td>
+                    <td>3 working days</td>
+                </tr>
+                <tr>
+                    <td>Authorization request</td>
+                    <td>2 working days</td>
+                </tr>
+            </table>
+            
+            <h3>Grace Period Reference</h3>
+            
+            <table>
+                <tr>
+                    <th>Customer Type</th>
+                    <th>Grace Period</th>
+                    <th>Notes</th>
+                </tr>
+                <tr>
+                    <td>Standard customers</td>
+                    <td>29 minutes</td>
+                    <td>All UK rentals</td>
+                </tr>
+                <tr>
+                    <td><strong>Star customers</strong></td>
+                    <td><strong>2 hours</strong></td>
+                    <td><strong>UK rentals only</strong></td>
+                </tr>
+            </table>
+            
+            <h3>Contact Directory</h3>
+            
+            <table>
+                <tr>
+                    <th>Team/Department</th>
+                    <th>Email</th>
+                    <th>When to Use</th>
+                </tr>
+                <tr>
+                    <td>CS Authorizations</td>
+                    <td>csauthorisations@europcar.com</td>
+                    <td>Refund authorization requests</td>
+                </tr>
+                <tr>
+                    <td>Outsource Support</td>
+                    <td>outsourcesupport@europcar.com</td>
+                    <td>RFI escalations, system issues</td>
+                </tr>
+                <tr>
+                    <td>Executive Relations</td>
+                    <td>executive.relations@europcar.com</td>
+                    <td>GDPR, legal, MD escalations</td>
+                </tr>
+                <tr>
+                    <td>Damage Team</td>
+                    <td>csdamage@europcar.com</td>
+                    <td>Damage disputes</td>
+                </tr>
+                <tr>
+                    <td>Fleet Services</td>
+                    <td>benjamin.spokes@europcar.com</td>
+                    <td>Breakdown expenses</td>
+                </tr>
+                <tr>
+                    <td>UK Security</td>
+                    <td>uk.security@europcar.com</td>
+                    <td>Watchlist, security concerns</td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="section10">
+            <h2>10. Specialized Scenarios & Edge Cases</h2>
+            
+            <h3>Tour Operator Specific Procedures</h3>
+            
+            <h4>RentalCars Bookings</h4>
+            <p><strong>Identification:</strong></p>
+            <ul>
+                <li>Booking source: Often LONC75, other city codes + C75</li>
+                <li>Account name: RentalCars, Travel Jigsaw</li>
+                <li>Method of payment: VCH (voucher)</li>
+            </ul>
+            
+            <div class="info-box">
+                <strong>Key Differences:</strong>
+                <ol>
+                    <li><strong>Split Billing:</strong> RentalCars pays basic rental, customer pays extras</li>
+                    <li><strong>GDPR:</strong> No Data Protection email needed (they are our customer)</li>
+                    <li><strong>Voucher Coverage:</strong> Check F12+W for what's included</li>
+                    <li><strong>Unused Days:</strong> Cannot refund unless medical/mechanical proof</li>
+                </ol>
+            </div>
+            
+            <h3>Privilege/Star Customer Benefits</h3>
+            <ul>
+                <li>Free additional driver (varies by tier)</li>
+                <li>Grace period: <strong>2 hours</strong> (UK only)</li>
+                <li>Priority service</li>
+                <li>Upgrade possibilities</li>
+            </ul>
+            
+            <h3>International Hire Complexities</h3>
+            
+            <h4>Greenway vs Non-Greenway Countries</h4>
+            <table>
+                <tr>
+                    <th>Greenway Countries</th>
+                    <th>Non-Greenway Countries</th>
+                </tr>
+                <tr>
+                    <td>
+                        <ul>
+                            <li>UK, France, Germany, Spain, Italy, Belgium, Portugal, Netherlands</li>
+                            <li>Full system visibility</li>
+                            <li>FileNet may have documents</li>
+                            <li>Refund via Greenway if UK has money</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>All others (Australia, NZ, Austria, Switzerland, etc.)</li>
+                            <li>Reservation visible only</li>
+                            <li>Must RFI for any information</li>
+                            <li>Country decides on refunds</li>
+                            <li>Use country chargeback forms</li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+            
+            <h3>Vulnerable Customer Handling</h3>
+            
+            <div class="warning-box">
+                <strong>Indicators of Vulnerability:</strong>
+                <ul>
+                    <li>Mental health mentions</li>
+                    <li>Bereavement during/affecting rental</li>
+                    <li>Medical conditions impacting rental</li>
+                    <li>Elderly with comprehension issues</li>
+                    <li>Financial hardship expressed</li>
+                </ul>
+                
+                <strong>Adjusted Approach:</strong>
+                <ol>
+                    <li><strong>Extra patience:</strong> Allow time for understanding</li>
+                    <li><strong>Simpler language:</strong> Avoid jargon, short sentences</li>
+                    <li><strong>Repeat key points:</strong> Confirm understanding</li>
+                    <li><strong>Empathy:</strong> Acknowledge their situation genuinely</li>
+                    <li><strong>Flexibility:</strong> Consider policy exceptions where reasonable</li>
+                    <li><strong>Documentation:</strong> Note vulnerability in case comments</li>
+                    <li><strong>Escalation:</strong> If welfare concerns, escalate to TL</li>
+                </ol>
+            </div>
+        </section>
+
+        <section id="section11">
+            <h2>11. Best Practices and Pro Tips</h2>
+            
+            <h3>Investigation Efficiency</h3>
+            
+            <div class="success-box">
+                <h4>Time-Saving Techniques:</h4>
+                <ol>
+                    <li><strong>Check F7 notes FIRST</strong> - saves unnecessary RFIs</li>
+                    <li><strong>Use Connexus immediately for fuel/mileage</strong> - most reliable source</li>
+                    <li><strong>"Retrieve All Docs" before KGS</strong> - faster access</li>
+                    <li><strong>Double-click RA numbers in Greenway</strong> - copies to clipboard</li>
+                    <li><strong>Keep SixPay logged in separate tab</strong> - quick payment checks</li>
+                    <li><strong>Bookmark frequent systems</strong> - saves navigation time</li>
+                </ol>
+            </div>
+            
+            <h3>Greenway Power User Tips</h3>
+            <ul>
+                <li><span class="key-combo">F7</span> on invoice screen FIRST (before anything else)</li>
+                <li><span class="key-combo">F12+W</span> shows all payment methods</li>
+                <li><span class="key-combo">Ctrl+E</span> on reservation shows full history</li>
+                <li><span class="key-combo">F12+D</span> on Screen 17 shows total charges quickly</li>
+                <li>Page Down multiple times on Screen 17 for all notes</li>
+            </ul>
+            
+            <h3>Common Paragraphs to Memorize</h3>
+            
+            <h4>Refund Timeline:</h4>
+            <pre>"I have processed a refund of £[X] to your card ending [XXXX]. Please allow 3-10 working days for this to appear in your account, depending on your card issuer's processing times."</pre>
+            
+            <h4>Deposit Authorization Explanation:</h4>
+            <pre>"The deposit is an authorization on your card, not an actual charge. This means your available balance was temporarily reduced, but the funds were not taken. Your card issuer will release this authorization within 3-10 working days, or up to 30 days maximum."</pre>
+            
+            <h4>Maintaining Charge with Documentation:</h4>
+            <pre>"I have reviewed the signed Rental Agreement and Additional Optional Products form for your rental. These documents, which you signed at the time of vehicle collection, confirm that [charge] was agreed to at £[X] per day. As this charge is fully supported by your signed agreement, I must respectfully uphold it."</pre>
+            
+            <h3>Handling High Volume</h3>
+            
+            <div class="info-box">
+                <h4>Prioritization Strategy:</h4>
+                <ol>
+                    <li><strong>Urgent/escalated cases first</strong> (legal threats, MD mention, complaints)</li>
+                    <li><strong>Quick wins</strong> (simple document requests, duplicate invoices)</li>
+                    <li><strong>Approaching SLA</strong> (4+ days old)</li>
+                    <li><strong>Complex investigations</strong> (require multiple systems/RFI)</li>
+                </ol>
+            </div>
+            
+            <h3>Common Pitfalls to Avoid</h3>
+            
+            <table>
+                <tr>
+                    <th>❌ Don't Do This</th>
+                    <th>✅ Do This Instead</th>
+                </tr>
+                <tr>
+                    <td>Not checking F7 notes before RFI</td>
+                    <td>Always check F7 notes first</td>
+                </tr>
+                <tr>
+                    <td>Assuming Connexus unavailable</td>
+                    <td>Check Connexus for all fuel/mileage cases</td>
+                </tr>
+                <tr>
+                    <td>Copy-pasting template unchanged</td>
+                    <td>Personalize every template</td>
+                </tr>
+                <tr>
+                    <td>Using internal jargon (RA, SOR, DEBCRED)</td>
+                    <td>Use customer-friendly language</td>
+                </tr>
+                <tr>
+                    <td>Not attaching evidence when maintaining</td>
+                    <td>Always attach supporting documents</td>
+                </tr>
+                <tr>
+                    <td>Vague case comments</td>
+                    <td>Write detailed investigation notes</td>
+                </tr>
+                <tr>
+                    <td>Closing cases awaiting information</td>
+                    <td>Cancel instead with clear comment</td>
+                </tr>
+            </table>
+            
+            <h3>Difficult Conversations</h3>
+            
+            <h4>Angry Customers - Template Approach:</h4>
+            <div class="info-box">
+                <pre>"I understand you're frustrated with this situation, and I want to provide you with a clear explanation.
+
+I've thoroughly investigated your case by reviewing [systems/evidence]. Based on this investigation, [factual findings].
+
+[Decision with reasoning]
+
+I appreciate this may not be the outcome you hoped for, but I want to ensure you understand the basis for this decision. If you have any additional evidence or questions, please let me know."</pre>
+            </div>
+            
+            <h4>Empathy Without Undermining Decision</h4>
+            
+            <table>
+                <tr>
+                    <th>❌ Avoid</th>
+                    <th>✅ Use Instead</th>
+                </tr>
+                <tr>
+                    <td>"I'm sorry but we can't refund"</td>
+                    <td>"Based on the signed agreement, the charge is correct"</td>
+                </tr>
+                <tr>
+                    <td>"Unfortunately the charge stands"</td>
+                    <td>"The documentation supports this charge"</td>
+                </tr>
+                <tr>
+                    <td>"Policy states..."</td>
+                    <td>"As outlined in the Terms agreed to at booking..."</td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="section12">
+            <h2>12. Continuous Improvement</h2>
+            
+            <h3>Self-Assessment Questions</h3>
+            
+            <div class="info-box">
+                <h4>After Each Case, Ask Yourself:</h4>
+                <ol>
+                    <li>Did I check all relevant systems?</li>
+                    <li>Is my decision evidence-based?</li>
+                    <li>Did I personalize the template?</li>
+                    <li>Did I answer all customer questions?</li>
+                    <li>Are my case comments clear and detailed?</li>
+                    <li>Did I maintain professionalism?</li>
+                    <li>Would I be confident defending this decision?</li>
+                    <li>Did I attach supporting evidence?</li>
+                    <li>Did I complete all mandatory fields?</li>
+                    <li>Could another agent understand my investigation from my notes?</li>
+                </ol>
+            </div>
+            
+            <h3>Essential Knowledge Areas</h3>
+            
+            <ul class="checklist">
+                <li>Greenway navigation (all key screens)</li>
+                <li>Connexus data interpretation</li>
+                <li>Terms & Conditions key sections</li>
+                <li>UK Tariff Guide charges</li>
+                <li>Reason code hierarchy</li>
+                <li>Authorization limits</li>
+                <li>Refund processing methods</li>
+                <li>RFI escalation process</li>
+                <li>International guidelines basics</li>
+                <li>Document location matrix</li>
+                <li>Common templates</li>
+                <li>Email professional standards</li>
+            </ul>
+        </section>
+
+        <section id="section13">
+            <h2>13. Final Checklist and Quick Start</h2>
+            
+            <h3>New Case Quick Start Process</h3>
+            
+            <table>
+                <tr>
+                    <th>Step</th>
+                    <th>Action</th>
+                    <th>Time</th>
+                </tr>
+                <tr>
+                    <td><strong>1. Read & Understand</strong></td>
+                    <td>Read email thoroughly, identify main issue, extract RA number and details</td>
+                    <td>2 min</td>
+                </tr>
+                <tr>
+                    <td><strong>2. GDPR Check</strong></td>
+                    <td>Verify email address matches account</td>
+                    <td>1 min</td>
+                </tr>
+                <tr>
+                    <td><strong>3. Qualification</strong></td>
+                    <td>Complete all mandatory fields, select reason codes</td>
+                    <td>2 min</td>
+                </tr>
+                <tr>
+                    <td><strong>4. System Investigation</strong></td>
+                    <td>Greenway (F7 notes!), Documents, Connexus, SixPay as needed</td>
+                    <td>10-15 min</td>
+                </tr>
+                <tr>
+                    <td><strong>5. Decision Making</strong></td>
+                    <td>Review evidence, check T&C, determine outcome</td>
+                    <td>5 min</td>
+                </tr>
+                <tr>
+                    <td><strong>6. Communication</strong></td>
+                    <td>Select template, personalize, attach evidence, check quality</td>
+                    <td>10 min</td>
+                </tr>
+                <tr>
+                    <td><strong>7. Process Refund</strong></td>
+                    <td>DEBCRED if applicable, document in comments</td>
+                    <td>5 min</td>
+                </tr>
+                <tr>
+                    <td><strong>8. Closure</strong></td>
+                    <td>Outcome, root cause, case comments, send email, close</td>
+                    <td>3 min</td>
+                </tr>
+            </table>
+            
+            <p><strong>Total Time Target:</strong> 30-45 minutes per case (varies by complexity)</p>
+            
+            <h3>Emergency Procedures</h3>
+            
+            <div class="error-box">
+                <h4>System Down:</h4>
+                <ol>
+                    <li>Check Teams for announcements</li>
+                    <li>Contact BSTQ/outsourcesupport@europcar.com</li>
+                    <li>Work cases not requiring that system</li>
+                    <li>Document delays in case comments</li>
+                </ol>
+            </div>
+            
+            <div class="warning-box">
+                <h4>Unsure of Decision:</h4>
+                <ol>
+                    <li>Document your investigation</li>
+                    <li>Note what's making you uncertain</li>
+                    <li>Ask Team Leader BEFORE responding</li>
+                    <li>Never guess - better to ask</li>
+                </ol>
+            </div>
+            
+            <div class="error-box">
+                <h4>Customer Threatens Immediate Action (Legal/Media/MD):</h4>
+                <ol>
+                    <li>Remain calm and professional</li>
+                    <li>Complete investigation thoroughly</li>
+                    <li>Document everything in detail</li>
+                    <li>Escalate to Team Leader immediately</li>
+                    <li>Don't commit to resolutions without approval</li>
+                </ol>
+            </div>
+        </section>
+
+        <section id="section14">
+            <h2>14. Appendices</h2>
+            
+            <h3>Appendix A: Sample Email Templates</h3>
+            
+            <h4>Template 1: Fuel Charge - Charges Upheld</h4>
+            <pre>Dear [Customer Name],
+
+Thank you for your email regarding the fuel charge on your rental invoice.
+
+I understand your concerns about the fuel charge of £[amount], and I have thoroughly investigated this matter.
+
+I have reviewed our vehicle telemetry data for your rental, which tracks fuel levels throughout the hire period. This data shows that the vehicle was returned with [X litres/X%] fuel, rather than the full tank required by the full-to-full policy outlined in your Rental Agreement.
+
+The charge of £[amount] represents [X litres] of fuel at £2.40 per litre, as agreed in your signed Rental Agreement. I have attached a copy of the telemetry data and your signed agreement for your reference.
+
+While I understand this is not the outcome you were hoping for, the charge is fully supported by our vehicle tracking data and your signed rental terms.
+
+If you have a dated and time-stamped fuel receipt showing you refueled before returning the vehicle, please send this to me and I will review your case again.
+
+If you have any further questions, please don't hesitate to contact us.
+
+Kind regards,
+
+[Your Name]
+Customer Services Advisor
+Europcar UK</pre>
+            
+            <h4>Template 2: Fuel Charge - Refund Issued</h4>
+            <pre>Dear [Customer Name],
+
+Thank you for your email regarding the fuel charge on your rental invoice.
+
+I sincerely apologize for this error. I have reviewed our vehicle telemetry data and can confirm that the vehicle was returned with a full tank of fuel, as required.
+
+I have processed a refund of £[amount] to your card ending in [XXXX]. Please allow 3-10 working days for this to appear in your account, depending on your card issuer's processing times.
+
+Thank you for bringing this to our attention, and I apologize again for any inconvenience this has caused.
+
+If you have any further questions, please don't hesitate to contact us.
+
+Kind regards,
+
+[Your Name]
+Customer Services Advisor
+Europcar UK</pre>
+            
+            <h4>Template 3: Coverage Charge - Charges Upheld</h4>
+            <pre>Dear [Customer Name],
+
+Thank you for your email regarding the coverage charge on your rental invoice.
+
+I understand your concerns about the [coverage type] charge, and I have reviewed your rental documentation.
+
+I have examined the signed Rental Agreement and Additional Optional Products form for your rental. Both documents clearly show that you agreed to [coverage product] at £[X] per day for [X days], totaling £[amount].
+
+The Additional Optional Products form, which you signed at the time of vehicle collection, specifically lists this coverage with the daily rate and provides a breakdown of the total cost. I have attached copies of both documents for your reference.
+
+As these charges are fully supported by your signed agreement, I must respectfully uphold them.
+
+If you have any further questions, please don't hesitate to contact us.
+
+Kind regards,
+
+[Your Name]
+Customer Services Advisor
+Europcar UK</pre>
+            
+            <h4>Template 4: Deposit - Authorization Explanation</h4>
+            <pre>Dear [Customer Name],
+
+Thank you for your email regarding the deposit from your recent rental.
+
+I understand your concern about the deposit amount. Let me explain how our deposit system works:
+
+When you collected your vehicle, we placed an authorization (also called a "hold") on your card for £[amount]. This is not an actual charge, but a temporary reservation of funds that reduces your available balance.
+
+As your rental has now been completed and all charges settled, this authorization has been released. I have attached a copy of the reversal receipt from our payment processor, which confirms the release was processed on [date].
+
+Your card issuer should return these funds to your available balance within 3-10 working days from the release date. In some cases, it can take up to 30 days for the authorization to fully expire.
+
+If the funds have not appeared after 10 working days, I recommend contacting your card issuer's authorizations department with the attached receipt.
+
+If you have any further questions, please don't hesitate to contact us.
+
+Kind regards,
+
+[Your Name]
+Customer Services Advisor
+Europcar UK</pre>
+            
+            <h3>Appendix B: Glossary of Terms</h3>
+            
+            <table>
+                <tr>
+                    <th>Term</th>
+                    <th>Definition</th>
+                </tr>
+                <tr>
+                    <td><strong>After Rental</strong></td>
+                    <td>Customer contact received after vehicle has been returned</td>
+                </tr>
+                <tr>
+                    <td><strong>AOP</strong></td>
+                    <td>Additional Optional Products form - documents coverage, equipment, and optional products</td>
+                </tr>
+                <tr>
+                    <td><strong>Authorization</strong></td>
+                    <td>Temporary hold on a card that reduces available balance but is not a charge</td>
+                </tr>
+                <tr>
+                    <td><strong>CDW</strong></td>
+                    <td>Collision Damage Waiver - reduces customer liability for damage</td>
+                </tr>
+                <tr>
+                    <td><strong>Connexus</strong></td>
+                    <td>Vehicle telemetry system tracking fuel, mileage, location</td>
+                </tr>
+                <tr>
+                    <td><strong>DEBCRED</strong></td>
+                    <td>Greenway screen for processing refunds and amendments</td>
+                </tr>
+                <tr>
+                    <td><strong>D&C App</strong></td>
+                    <td>Delivery & Collection App with vehicle photos and paperwork</td>
+                </tr>
+                <tr>
+                    <td><strong>Greenway</strong></td>
+                    <td>Primary reservation and billing system</td>
+                </tr>
+                <tr>
+                    <td><strong>KGS</strong></td>
+                    <td>Document scanning system for UK rentals</td>
+                </tr>
+                <tr>
+                    <td><strong>RA</strong></td>
+                    <td>Rental Agreement number</td>
+                </tr>
+                <tr>
+                    <td><strong>RFI</strong></td>
+                    <td>Request For Information (asking station/country for details)</td>
+                </tr>
+                <tr>
+                    <td><strong>SixPay</strong></td>
+                    <td>Primary payment processing system</td>
+                </tr>
+                <tr>
+                    <td><strong>SLA</strong></td>
+                    <td>Service Level Agreement (timeframe for completion)</td>
+                </tr>
+                <tr>
+                    <td><strong>SOR</strong></td>
+                    <td>Statement of Return (check-in documentation)</td>
+                </tr>
+                <tr>
+                    <td><strong>T&C</strong></td>
+                    <td>Terms and Conditions</td>
+                </tr>
+            </table>
+        </section>
+
+        <footer>
+            <h3>📌 Key Reminders for Success</h3>
+            
+            <div style="background: #f8f9fa; padding: 30px; border-radius: 8px; margin: 30px 0;">
+                <ul style="list-style: none; padding: 0;">
+                    <li style="padding: 10px 0; font-size: 1.1em;">🎯 <strong>Quality over speed</strong> - Take time to investigate thoroughly</li>
+                    <li style="padding: 10px 0; font-size: 1.1em;">📚 <strong>Evidence-based decisions</strong> - Use systems and documentation</li>
+                    <li style="padding: 10px 0; font-size: 1.1em;">🤝 <strong>Customer empathy</strong> - Acknowledge their experience while presenting facts</li>
+                    <li style="padding: 10px 0; font-size: 1.1em;">📝 <strong>Clear communication</strong> - Professional, personalized, and complete</li>
+                    <li style="padding: 10px 0; font-size: 1.1em;">✅ <strong>Attention to detail</strong> - Complete all fields, attach evidence, document thoroughly</li>
+                </ul>
+            </div>
+            
+            <p style="text-align: center; margin-top: 40px; color: #666;">
+                <strong>Document Version:</strong> 1.0 | <strong>Last Updated:</strong> October 2025<br>
+                <strong>Created for:</strong> Foundever Customer Service Advisors supporting Europcar UK
+            </p>
+            
+            <p style="text-align: center; margin-top: 20px; padding-top: 20px; border-top: 1px solid #ddd;">
+                Keep this guide accessible, refer to it often, and update it with your own learnings.<br>
+                <strong>You're now equipped to handle After Rental cases like a pro! 🚗</strong>
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        // Add smooth scrolling for internal links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
